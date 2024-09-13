@@ -9,3 +9,10 @@ __pycache__/
 
 # Ignore virtual environment directory
 venv/
+
+# Ignore images directory
+images/
+JUSTTRAINIMAGES/
+
+# Ignore dataset directory
+dataset/
