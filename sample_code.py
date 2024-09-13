@@ -2,6 +2,13 @@ import os
 import random
 import pandas as pd
 
+# Purpose: Provides a basic template for making predictions from images. This file is typically where you’d integrate your model or approach.
+
+# How It Works:
+# -Reads the test CSV file.
+# -Applies a predictor function to each row, which currently returns random predictions. Replace this with your actual model inference logic.
+# -Saves the predictions to an output CSV file in the required format.
+
 def predictor(image_link, category_id, entity_name):
     '''
     Call your model/approach here

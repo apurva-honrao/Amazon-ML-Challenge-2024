@@ -1,9 +1,24 @@
 import pandas as pd
 import argparse
-import re
+import re 
 import os
 import constants
 from utils import parse_string
+
+# Purpose: This script checks if two CSV files (test and output) have matching structures and data, particularly checking for valid "index" columns and unit validation.
+
+# Key Functions:
+
+# sanity_check(test_filename, output_filename): This function:
+# Checks if both the test and output CSV files exist and are valid.
+# Reads the test and output CSV files.
+# Compares the "index" columns of both files to ensure they match.
+# Uses parse_string from utils.py to validate the content of the output file.
+
+# Communication:
+# It imports parse_string from utils.py to validate the format of the predictions in the output CSV.
+# It uses constants.py indirectly through utils.py to check valid units.
+
 
 def check_file(filename):
     if not filename.lower().endswith('.csv'):

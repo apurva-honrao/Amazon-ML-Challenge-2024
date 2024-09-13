@@ -14,6 +14,19 @@ import requests
 import urllib
 from PIL import Image
 
+# Purpose: Contains utility functions for parsing strings, validating units, and downloading images.
+
+# Key Functions:
+
+# common_mistake(unit): Corrects common unit mistakes (e.g., converts “feet” to “foot”).
+# parse_string(s): Parses a string to extract numeric values and units, ensuring the unit is in allowed_units from constants.py. If not, it raises an error.
+# download_image and download_images: Download images from a list of links either sequentially or in parallel using multiprocessing.
+
+# Communication:
+# It imports allowed_units from constants.py to ensure the parsed unit is valid.
+# It is called by other files (e.g., in the Jupyter notebook to download images or parse predictions).
+
+
 def common_mistake(unit):
     if unit in constants.allowed_units:
         return unit

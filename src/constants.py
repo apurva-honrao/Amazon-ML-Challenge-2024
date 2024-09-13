@@ -1,3 +1,7 @@
+# Purpose: Contains a dictionary (entity_unit_map) that maps entities like "width", "height", "item_weight", etc., to allowed units (e.g., "inch", "foot", "gram", etc.).
+
+# Communication: The allowed_units set is derived from this map and is used in other files (like utils.py) to check if the parsed units are valid.
+
 entity_unit_map = {
     'width': {'centimetre', 'foot', 'inch', 'metre', 'millimetre', 'yard'},
     'depth': {'centimetre', 'foot', 'inch', 'metre', 'millimetre', 'yard'},
