@@ -119,7 +119,7 @@ if __name__ == "__main__":
 
     # Predict and format the output
     test['prediction'] = test.apply(
-        lambda row: predictor(row['image_link'], row['group_id'], row['entity_name']), axis=1)
+        lambda row: predictor(row['image_link'], row['entity_name'], model), axis=1)
     
     output_filename = os.path.join(DATASET_FOLDER, 'JUSTTEST_out.csv')
     test[['index', 'prediction']].to_csv(output_filename, index=False)
