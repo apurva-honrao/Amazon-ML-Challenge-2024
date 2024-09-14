@@ -1,20 +1,22 @@
-import os
-from PIL import Image
-import pytesseract
-import cv2
-import numpy as np
-from src.preprocessing import preprocess_image
+import easyocr
 
+# Initialize EasyOCR Reader (you can specify languages like ['en'] for English)
+reader = easyocr.Reader(['en'])
 
 def extract_text_from_image(image_path):
     """
-    Extract text from an image using Tesseract OCR.
+    Extract text from a grayscale image using EasyOCR.
     """
-    img = preprocess_image(image_path)
-    if img is None:
+    try:
+        # Perform OCR using EasyOCR
+        results = reader.readtext(image_path, detail=0)
+        
+        # Join the results into a single string
+        text = " ".join(results)
+        
+        print(f"Extracted text from {image_path}:\n{text}\n{'-'*50}")
+        return text
+    except Exception as e:
+        print(f"Error processing image {image_path}: {e}")
         return ""
 
-    custom_config = r'--psm 6'
-    text = pytesseract.image_to_string(img, config=custom_config)
-    print(f"Extracted text from {image_path}:\n{text}\n{'-'*50}")
-    return text
