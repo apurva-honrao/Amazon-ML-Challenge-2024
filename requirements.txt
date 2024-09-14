@@ -5,3 +5,4 @@ pillow
 requests
 argparse
 multiprocessing
+opencv-python-headless
