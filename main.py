@@ -17,16 +17,16 @@ def predictor(image_link, entity_name, model):
             print(f"Image not found at: {image_path}")
             return ""
         
-        text = extract_text_from_image(image_path)
+        text = extract_text_from_image(image_path)  #ocr file
         if not text:
             print(f"No text extracted from {image_link}")
             return ""
         
-        entities = extract_entities(text, model)
+        entities = extract_entities(text, model)  #entity extraction file
 
         for entity in entities:
             if entity['label'] == entity_name:
-                formatted_value = format_entity_value(entity_name, entity['text'])
+                formatted_value = format_entity_value(entity_name, entity['text'])  #format output file
                 print(f"Formatted value for {entity_name}: {formatted_value}")
                 return formatted_value
         
