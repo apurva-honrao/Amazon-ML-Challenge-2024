@@ -65,7 +65,8 @@
     
 #     return img
 
-#------- Greyscaling  image in JUSTTEST.csv -----------------
+
+#------- Greyscaling  image in JUSTTEST.csv --------------
 
 # Step 1: Import libraries
 import pandas as pd
