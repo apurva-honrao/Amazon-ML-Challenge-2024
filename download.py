@@ -5,10 +5,10 @@ from src.utils import download_images
 # Paths
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 DATASET_FOLDER = os.path.join(PROJECT_ROOT, 'dataset')
-IMAGES_FOLDER = os.path.join(PROJECT_ROOT, 'JUSTTRAINIMAGES')
+IMAGES_FOLDER = os.path.join(PROJECT_ROOT, 'train_2_images')
 
 # Dataset Files
-TRAIN_CSV = os.path.join(DATASET_FOLDER, 'JUSTTRAIN.csv')
+TRAIN_CSV = os.path.join(DATASET_FOLDER, 'train_2.csv')
 
 # Download images function
 def run_image_download(image_links, download_folder):

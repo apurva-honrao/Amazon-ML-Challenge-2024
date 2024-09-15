@@ -16,3 +16,8 @@ JUSTTRAINIMAGES/
 
 # Ignore dataset directory
 dataset/
+
+train_2_images/
+
+# Ignore model directory
+colabNotebook/output/
